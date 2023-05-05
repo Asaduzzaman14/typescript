@@ -28,3 +28,4 @@ type Friends = "Monika" | "Rachel" | "Pheobe"
 type RemoveFriends<T, Key> = T extends Key ? never : T
 
 type CurrentFriends = RemoveFriends<Friends, "Monika">
+
