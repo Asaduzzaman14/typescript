@@ -18,3 +18,24 @@ type Area<T> = {
 const area1: Area<{ height: number, width: string }> = { height: 11, width: "Aasd" };
 
 
+
+
+
+
+type A = { num1: number }
+
+
+
+type B = {
+
+    [key in keyof A]: string;
+
+}
+
+const numbers: B = {
+
+    num1: "20"
+
+}
+
+
