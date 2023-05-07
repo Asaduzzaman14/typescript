@@ -10,9 +10,18 @@ class BankAccount {
         this._balance = balance
     }
 
+    private getTestBalance(): number {
+        return this._balance
+    }
+    get seeBalance(): number {
+        return this._balance
+    }
+
+    // getter
     get balance(): number {
         return this._balance
     }
+    // setter
     set depositBalance(newbalance: number) {
         this._balance += newbalance
     }
@@ -28,9 +37,9 @@ class BankAccount {
 }
 class StudentAccount extends BankAccount {
 
-    // test(){
-    //     this.
-    // }
+    test() {
+        this.seeBalance
+    }
 
 }
 

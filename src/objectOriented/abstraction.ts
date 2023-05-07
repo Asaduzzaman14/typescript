@@ -1,17 +1,15 @@
-interface Ivehicle {
+interface Vehicle {
     startEngine(): void;
     stopEngine(): void;
-    move(): void
+    move?(): void
 }
 
-class Vehicle implements Ivehicle {
+class CarA implements Vehicle {
 
     constructor(
         name: string,
         brand: string,
         modal: number) { }
-
-
 
     startEngine(): void {
         console.log('i am starting engine');
@@ -21,19 +19,18 @@ class Vehicle implements Ivehicle {
         console.log('i am stiping engine');
 
     };
-    move(): void {
-        console.log('i am moving');
+    // move(): void {
+    //     console.log('i am moving');
 
-    }
-    test(): void {
-        console.log('this is test');
+    // }
 
-    }
 }
-const cehicle = new Vehicle("Car", "BMW", 6)
 
 
-// abstract class 
+// const vehicle = new Vehicle("Car", "BMW", 6)
+
+
+// abstract class
 
 abstract class VehicleA {
 
@@ -44,6 +41,7 @@ abstract class VehicleA {
 
     abstract startEngine(): void
     abstract stopEngine(): void
+
     move(): void {
         console.log('i am moving');
 
@@ -52,7 +50,7 @@ abstract class VehicleA {
 }
 
 
-class CarA extends VehicleA {
+class CarB extends VehicleA {
     startEngine(): void {
         console.log('i am starting engine');
 
@@ -63,4 +61,4 @@ class CarA extends VehicleA {
     }
 }
 
-// const car1 = new VehicleA('Car', "honda", 2023)
+//  const car1 = new VehicleA('Car', "honda", 2023)
