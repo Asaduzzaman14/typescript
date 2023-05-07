@@ -1,4 +1,4 @@
-console.log("polymorphism.ts");
+console.log("polymorphism");
 
 class Person {
     takeNap(): void {
@@ -70,3 +70,4 @@ function getAreaOfShape(param: Shape) {
 
 getAreaOfShape(new Circel(10))
 getAreaOfShape(new Rectancel(10, 12))
+
